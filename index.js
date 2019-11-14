@@ -2,7 +2,7 @@ const express = require('express');
 var gameEngine = require('./gameEngine.js');
 var app = express();
 
-app.set('port', 5000);
+app.set('port', process.env.PORT || 5000);
 app.use(express.static(__dirname + '/public')); // allows public to be public?
 app.set('views', __dirname + "/views");
 app.set('view engine', 'ejs');

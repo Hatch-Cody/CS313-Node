@@ -4,7 +4,8 @@
   "description": "this is going to be rock, paper, scissors",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node indes.js"
   },
   "author": "Cody Hatch",
   "license": "ISC",

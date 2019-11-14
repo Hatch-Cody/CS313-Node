@@ -11,7 +11,7 @@ function getCpuChoice() {
         case 1:
             return "paper";
         default:
-            "scissors";
+            return "scissors";
     }
 }
 
