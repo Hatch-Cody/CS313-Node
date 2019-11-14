@@ -1,5 +1,5 @@
 function getRandomInt(min, max) {
-    return Math.floor(Math.random() * (min - max + 1)) + min;
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function getCpuChoice() {
@@ -7,11 +7,11 @@ function getCpuChoice() {
 
     switch (num) {
         case 0:
-            return "rock";
+            return "Rock";
         case 1:
-            return "paper";
+            return "Paper";
         default:
-            return "scissors";
+            return "Scissors";
     }
 }
 
@@ -20,17 +20,18 @@ function getWinner(player, cpu, username) {
 
     if (player == cpu)
         winner = "tie";
-    else if ((player == "rock" && cpu == "scissors")
-        || (player == "scissors" && cpu == "paper")
-        || (player == "paper" && cpu == "rock"))
+    else if ((player == "Rock" && cpu == "Scissors") || (player == "Scissors" && cpu == "Paper") || (player == "Paper" && cpu == "Rock"))
         winner = username;
-        else 
-        winner = cpu;
+    else
+        winner = "cpu";
 
-        return winner;
+    console.log("winner is " + winner);
+
+    return winner;
 }
 
 function playGame(req, res) {
+
     var player = req.query.player_choice;
     var username = req.query.username;
 
@@ -38,13 +39,9 @@ function playGame(req, res) {
 
     var winner = getWinner(player, cpu, username);
 
-    var stuff = {player: player, cpu: cpu, winner: winner}
+    var stuff = { player: player, cpu: cpu, winner: winner }
 
     res.render('results', stuff);
-
-
-    console.log("the player choice is " + player);
-    console.log("the player choice is " + cpu);
 }
 
 module.exports = { playGame: playGame }
