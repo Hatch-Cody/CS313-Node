@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Postage Calculator</title>
+</head>
+
+<body>
+    <div class="page">
+        <div class="main">
+            <div class="flexContainer">
+                <div class="infoBox">
+                    <div style="text-align: center; font-size: 30px; font-weight: bold">Postage Calculator</div>
+                    <div class="form">
+                        <form action="/process" method="GET">
+                            <input type="text" name="weight" placeholder="Weight (oz)"><br>
+                            <select name="mail_type">
+                                <option name="letter_stamped">Letter (stamped)</option>
+                                <option name="letter_metered">Letter (metered)</option>
+                                <option name="large_envelope">Large Envelope</option>
+                                <option name="package_service">First-Class Package</option>
+                            </select>
+                            <br><br>
+                            <input type="submit" value="Calculate">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
