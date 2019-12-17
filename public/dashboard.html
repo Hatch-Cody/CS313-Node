@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Time Clock</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="TCStyle.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="dashboardClientside.js"></script>
+
+</head>
+
+<body onload="displayTime(), showHours()">
+
+    <!-- Nav Bar -->
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a class="" style="float: left;" href="login.html">Log Out</a>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header">
+            Time Clock
+        </div>
+    </header>
+
+    <div class="page">
+        <div class="main">
+            <div class="flexContainer">
+                <div class="infoBox" id="infoBox">
+
+                    <div class="clock">
+                        <!-- display date -->
+                        <div class="date" id="date"></div>
+
+                        <!-- display current time -->
+                        <div class="clock" id="clock"></div>
+                    </div><br>
+
+                    <div>
+                        <button class="button" onclick="timeIn()">Clock In</button>
+                        <button class="button" onclick="timeOut()">Clock Out</button>
+                    </div>
+
+                    <!-- <div id="demo"></div> -->
+
+                </div>
+            </div>
+
+            <div class="flexContainer">
+                <div class="infoBox">
+                    <table class="table" id="table">
+                        <tr> <th>Time-In</th> <th>Time-Out</th> </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            Page Designed By: Cody Hatch
+        </footer>
+    </div>
+</body>
+
+</html>

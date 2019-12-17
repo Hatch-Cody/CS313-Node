@@ -1,16 +1,24 @@
 {
-  "name": "classgame",
+  "name": "time_clock",
   "version": "1.0.0",
-  "description": "this is going to be rock, paper, scissors",
-  "main": "index.js",
+  "description": "A time clock app",
+  "main": "server.js",
+  "dependencies": {
+    "async": "^3.1.0",
+    "bcrypt": "^3.0.7",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.0",
+    "pg": "^7.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
   },
-  "author": "Cody Hatch",
-  "license": "ISC",
-  "dependencies": {
-    "ejs": "^2.7.2",
-    "express": "^4.17.1"
-  }
+  "author": "Hatch",
+  "license": "ISC"
 }

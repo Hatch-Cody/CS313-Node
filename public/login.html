@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="loginStyle.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script src="clientsideUser.js"></script>
+
+    <title>TimeClock Login</title>
+
+</head>
+
+<body class="body">
+    <div class="loginBox">
+
+        <img src="/assets/avatar.png" class="avatar">
+
+        <h1>Login</h1>
+
+        <div>
+            <p>Username:</p>
+            <input type="text" id="username" placeholder="username"><br>
+            
+
+            <p>Password:</p>
+            <input type="password" id="password" placeholder="password"><br>
+
+            <input type="submit" id="submitButton" onclick="login()" value="Login">
+            <a href="userSignUp.html">Dont have an account?</a>
+            <div id="status"></div>
+
+        </div>
+    </div>
+</body>
+
+</html>

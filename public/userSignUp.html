@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="loginStyle.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+
+    <script src="clientsideUser.js"></script>
+
+    <title>TimeClock Registration</title>
+
+</head>
+
+<body class="body">
+    <div class="loginBox">
+
+        <img src="/assets/avatar.png" class="avatar">
+
+        <h1>Register</h1>
+
+        <div>
+
+            <input type="text" onkeyup="validate()"  id="email" name="email" placeholder="email"><br>
+            <input type="text" onkeyup="validate()"  id="username" name="username" placeholder="username"><br>
+            <input type="password" onkeyup="validate()" id="password" id="password" name="password"
+                placeholder="password"><br>
+            <input type="password" onkeyup="validate()" id="passwordMatch" id="passwordMatch" name="passwordMatch"
+                placeholder="password"><br>
+            <br><div id="errorMsg"></div>
+
+            <input type="submit" id="submitButton" onclick="register()" value="Register">
+            <a href="login.html">Already have an account?</a>
+            <div id="status"></div>
+
+        </div>
+    </div>
+</body>
+
+</html>
